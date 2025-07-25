@@ -67,8 +67,8 @@ spring.datasource.password=your_password,
 
 
 
-cd frontend,
-npm install,
+cd frontend,      
+npm install,       
 npm start
 
 
