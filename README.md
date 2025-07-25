@@ -57,14 +57,21 @@ cd backend
 # Run the Spring Boot Application
 
 
+
+
+
 spring.datasource.url=jdbc:mysql://localhost:3306/elitfit_db
 spring.datasource.username=root
 spring.datasource.password=your_password
 
 
-cd frontend
-npm install
+
+
+cd frontend,
+npm install,
 npm start
+
+
 
 
 🔐 Authentication
