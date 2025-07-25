@@ -1,0 +1,107 @@
+.homepage-hero {
+  height: 100vh;
+  background-image: url("../../assets/bg6.png");   /* visuel desktop */
+  background-size: cover;
+  background-position: center;
+  position: relative;          /* pour pouvoir positionner .hero-text-container */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 80px;           /* même espace qu’avant */
+  color: lime;                 /* si vous voulez conserver la couleur du texte */
+  font-family: sans-serif;
+}
+
+/* =========  TEXTE & BOUTON (règles que vous aviez déjà) ========= */
+.hero-text-container {
+  position: absolute;
+  bottom: 50px;
+  left: 50px;
+  text-align: left;
+  color: white;
+  max-width: 600px;
+  padding: 0 20px;
+  margin-bottom: 300px;
+
+}
+
+.hero-subtext {
+  font-size: 18px;
+  line-height: 1.8;
+  margin-bottom: 30px;
+  color: white;
+}
+
+.subscribe-button {
+  padding: 14px 30px;
+  font-size: 16px;
+  font-weight: 600;
+  font-style: italic;
+  color: white;
+  background: linear-gradient(135deg, #000000, #00cc44);
+  border: none;
+  border-radius: 999px;
+  box-shadow: 0 5px 20px rgba(0, 255, 100, 0.4);
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.subscribe-button:hover { opacity: 0.8; }
+.subscribe-button:active {
+  background: #ffffff;
+  color: #6ae11f;
+  opacity: 1;
+}
+
+/* ================= TABLET ================= */
+@media (max-width: 768px) {
+  .hero-text-container {
+    bottom: 60px;
+    left: 8px;
+    right: 20px;
+    max-width: none;
+    margin-bottom: 280px;
+  }
+  .hero-subtext { font-size: 16px; line-height: 1.6; margin-bottom: 20px; }
+  .subscribe-button { padding: 12px 24px; font-size: 15px; }
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 480px) {
+  /* ► 1. on change juste l’image de fond pour mobile */
+  .homepage-hero {
+    background-image: url("../../assets/bgmobile.png"); /* visuel optimisé mobile */
+    background-position: top center;                   /* centrage différent si besoin */
+  }
+
+  /* ► 2. Vos réglages texte/bouton adaptés */
+  .hero-text-container {
+    bottom: 40px;
+    left: 10px;
+    right: 10px;
+    text-align: center;
+    margin-bottom: 60px;
+  }
+  .hero-subtext { font-size: 14px; line-height: 1.5; }
+  .subscribe-button { font-size: 14px; padding: 10px 20px; }
+}
+.homepage-hero {
+  height: 100vh;
+  background: url("../../assets/bg6.png") center / cover no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding-top: 80px;
+  font-family: sans-serif;
+  color: lime;
+}
+
+/* ===== IMAGE DE FOND POUR MOBILE ===== */
+@media (max-width: 600px) {
+  .homepage-hero {
+    background: url("../../assets/bgmobile.png") top center / cover no-repeat;
+  }
+}

@@ -1,0 +1,151 @@
+.membership-section {
+  background-color: #000000;
+  padding: 60px 20px;
+  font-family: sans-serif;
+  text-align: center;
+}
+
+
+
+.membership-title {
+  color: #ffffff;
+  font-size: 28px;
+  font-weight: bold;
+  margin: 0 auto 30px;
+  text-transform: uppercase;
+  position: relative;
+  text-align: center;
+  width: fit-content;
+}
+
+.section-title::after {
+  content: "";
+  display: block;
+  width: 120px;
+  height: 1px;
+  background-color: #00ff4c;
+  margin: 6px auto 0;
+}
+
+.membership-cards {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+/* Card Style */
+.membership-card {
+ display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Push button to bottom */
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 255, 100, 0.08));
+  color: white;
+  border-radius: 20px;
+  width: 280px;
+  padding: 30px 25px;
+  transition: all 0.4s ease;
+  border: 1px solid rgba(0, 255, 100, 0.3);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 0 0 rgba(0, 255, 100, 0);
+  position: relative;
+
+  /* Set a min height, adjust as needed */
+  min-height: 420px; 
+}
+
+/* Hover Effect */
+.membership-card:hover {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.9), rgba(0, 255, 100, 0.15));
+  box-shadow: 0 0 30px rgba(0, 255, 100, 0.35);
+  transform: scale(1.05);
+}
+
+/* Dotted Overlay */
+.membership-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 20px;
+  background: radial-gradient(#00ff4c22 1px, transparent 1px);
+  background-size: 5px 5px;
+  opacity: 0.05;
+  pointer-events: none;
+}
+
+/* Header: Price Left, Title Right */
+.plan-title {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: white;
+  text-align: left;
+  width: 100%;
+}
+
+.plan-price {
+  font-size: 20px;
+  font-weight: bold;
+  color: #00ff4c;
+  margin-bottom: 20px;
+  text-align: left;
+  width: 100%;
+}
+
+
+/* Features */
+.plan-features {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 25px;
+  width: 100%;
+}
+
+.plan-features li {
+  font-size: 13px;
+  color: #ccc;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  text-align: left;
+}
+
+.check-icon {
+  color: #00ff4c;
+  margin-right: 8px;
+  font-weight: bold;
+  flex-shrink: 0;
+}
+
+/* Button */
+.membership-btn {
+  background: white;
+  color: black;
+  font-weight: bold;
+  border: none;
+  border-radius: 999px;
+  padding: 10px 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  align-self: center;
+  margin-top: 60px;
+}
+
+.membership-btn:hover {
+  background: black;
+  color: white;
+  transform: scale(1.05);
+}
+
+/* Responsive layout */
+@media (max-width: 600px) {
+  .plan-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .plan-title, .plan-price {
+    text-align: left;
+  }
+}

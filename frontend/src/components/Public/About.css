@@ -1,0 +1,73 @@
+/* ============================= */
+/* About Section Base Styling    */
+/* ============================= */
+.about-section {
+  background-color: black;
+  padding: 40px 20px;
+  color: white;
+}
+
+/* ============================= */
+/* Flex Layout                  */
+/* ============================= */
+.about-content {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* ============================= */
+/* Image Styling + Animation    */
+/* ============================= */
+.about-image {
+  max-width: 500px;
+  width: 100%;
+  border-radius: 12px;
+  opacity: 0; /* start hidden */
+  animation: popInFromTop 1s ease-out forwards;
+}
+
+/* ============================= */
+/* Text Styling                 */
+/* ============================= */
+.about-text {
+  max-width: 600px;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+/* Green Accent Text */
+.green-text {
+  color: #00ff4c;
+  font-style: italic;
+}
+
+/* ============================= */
+/* Animation Keyframe           */
+/* ============================= */
+@keyframes popInFromTop {
+  0% {
+    transform: scale(0.8) translateY(-40px);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1) translateY(0);
+    opacity: 1;
+  }
+}
+
+/* ============================= */
+/* Responsive Tweaks            */
+/* ============================= */
+@media (max-width: 768px) {
+  .about-text {
+    font-size: 16px;
+  }
+
+  .about-image {
+    max-width: 100%;
+  }
+}

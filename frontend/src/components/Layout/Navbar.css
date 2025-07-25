@@ -1,0 +1,187 @@
+/* Navbar container */
+.navbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
+  height: 90px;
+  z-index: 100;
+  background: transparent;
+}
+
+/* Logo */
+.navbar-logo {
+  max-height: 150px;
+  width: auto;
+  padding-top: 20px;
+}
+
+/* Menu container - desktop */
+.menu-container {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 30px;
+  padding: 12px 30px;
+  border: 0.1px solid #00ff66;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  z-index: 10;
+}
+
+/* Menu links */
+.menu-item {
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 16px;
+  font-style: italic;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+}
+.menu-item:hover {
+  color: #00ff66;
+  text-decoration: underline;
+}
+
+/* Login button (general style) */
+.login-button {
+  padding: 10px 30px;
+  font-size: 16px;
+  font-weight: 600;
+  font-style: italic;
+  color: white;
+  background: linear-gradient(135deg, #000000, #00cc44);
+  box-shadow: 0 3px 16px rgba(0, 255, 100, 0.4);
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+  white-space: nowrap;
+}
+
+.login-button:hover {
+  opacity: 0.8;
+}
+
+.login-button:active {
+  background: white;
+  color: #57d30a;
+  opacity: 1;
+}
+
+/* Login button outside menu (desktop only) */
+.desktop-login {
+  display: inline-block;
+  margin-left: 20px;
+}
+
+/* Login button inside menu (mobile only) */
+.mobile-login {
+  display: none;
+}
+
+/* Hamburger button */
+.menu-toggle {
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  display: none; /* hidden on desktop */
+  flex-direction: column;
+  justify-content: space-around;
+  height: 24px;
+  width: 30px;
+  padding: 0;
+  position: relative;
+  z-index: 20;
+}
+
+.menu-toggle .bar {
+  height: 3px;
+  width: 100%;
+  background-color: white;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+/* Animate hamburger when active */
+.menu-toggle.active .bar:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.menu-toggle.active .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle.active .bar:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* ======================== */
+/* RESPONSIVE MOBILE STYLES */
+/* ======================== */
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: row;
+    padding: 20px;
+    height: 20px;
+    margin-top: 50px;
+  }
+
+  /* Show hamburger */
+  .menu-toggle {
+    display: flex;
+  }
+
+  /* Hide menu by default */
+  .menu-container {
+    position: fixed;
+    top: 110px;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.95);
+    backdrop-filter: blur(5px);
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px 0;
+    border-radius: 0 0 10px 10px;
+    transform: translateY(-200%);
+    transition: transform 0.6s ease;
+    text-align: center;
+    z-index: 15;
+  }
+
+  /* Show menu when open */
+  .menu-container.open {
+    transform: translateY(0);
+  }
+
+  .menu-item {
+    font-size: 18px;
+    padding: 10px 20px;
+  }
+
+  /* Hide desktop login button on mobile */
+  .desktop-login {
+    display: none;
+  }
+
+  /* Show login button inside menu on mobile */
+  .mobile-login {
+    display: block;
+    width: 90%;
+    margin: 0 auto;
+    padding: 14px 0;
+    font-size: 18px;
+    border-radius: 999px;
+    box-shadow: 0 3px 16px rgba(0, 255, 100, 0.4);
+  }
+}
