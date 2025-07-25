@@ -40,14 +40,7 @@ ElitFit is a full-stack digital gym platform built to help gym administrators, c
 
 ---
 
-## 📸 Screenshots
 
-<img src="./screenshots/login.png" width="400"/>
-<img src="./screenshots/register-member.png" width="400"/>
-<img src="./screenshots/dashboard-admin.png" width="400"/>
-<img src="./screenshots/coach-list.png" width="400"/>
-
----
 
 ## ⚙️ Installation & Setup
 
